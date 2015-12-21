@@ -22,7 +22,11 @@ html, body{
  /* @mediaqueries */
   @media (min-width: 768px) {
    .container {
-     width: 750px;
+     width: 685px;
+     font-size: 36px;
+   }
+   .links {
+    margin-right: 5em;
    }
  }
  @media (min-width: 992px) {
@@ -38,11 +42,27 @@ html, body{
    .one-fourth {
      width:21%;
    }
+   header {
+    width: 45%;
+   }
  }
  @media (min-width: 1200px) {
    .container {
      width: 1170px;
    }
+   header {
+    width: 75%;
+   }
+ }
+ @media (min-width: 1920px) {
+  .container {
+    width: 1860px;
+  }
+  .hero {
+    font-size: 72px;
+    margin-left: 85em;
+
+  }
  }
   /* GRID */
 .container {
@@ -167,6 +187,7 @@ float: center;
   text-align: center;
   line-height: 30px;
   margin-bottom: 170px;
+  margin-left: 10px;
 }
 .btn-free-trial {
   background-color: #000;
@@ -175,7 +196,7 @@ float: center;
   width: 100%;
   height: 100px;
   padding: 10px 20px;
-  margin: 50px 10px 50px -20px;
+  margin: 50px 10px 50px 0px;
 }
 .hero a:link {
   color: white;
