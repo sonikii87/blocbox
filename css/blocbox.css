@@ -2,11 +2,12 @@ html, body{
    overflow-x: hidden;
  }
  body {
-   font-family: "Montserrat", Helvetica, Arial, sans-serif;
-   color:#333333;
+   font-family: "nunito", Helvetica, Arial, sans-serif;
+   color:#000;
+     -webkit-font-smoothing: antialiased;
  }
  h1, h2, h3, h4, h5, h6 {
-   font-family: "Varela Round", Helvetica, Arial, sans-serif;
+   font-family: "nunito", Helvetica, Arial, sans-serif;
  }
  h2 {
    font-size:28px;
@@ -18,8 +19,9 @@ html, body{
    line-height: 19px;
    font-weight: 100;
  }
+
   /* GRID */
- .container {
+.container {
    margin-right: auto;
    margin-left: auto;
    padding-left: 15px;
@@ -28,16 +30,164 @@ html, body{
  }
  .container:before,
  .container:after {
-   content: " ";
+    content: " ";
    display: table;
  }
  .container:after {
    clear: both;
  }
- .one-half, .one-third, .one-fourth {
-   width:96%;
-   float:left;
-   position:relative;
-   min-height: 1px;
-   margin:0 2% 20px;
+ a:link {
+  text-decoration: none;
  }
+ a:hover {
+  text-decoration: none;
+ }
+ a:active {
+  text-decoration: none;
+ }
+ a:visited {
+  text-decoration: none;
+ }
+
+ /* Body and Header */
+header {
+	background-image: url(../images/people-woman-coffee-meeting.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 850px;
+}
+/* Logo */
+.logo_box {
+	float: left;
+  padding: 10px 70px;
+  margin: 5px;
+  z-index: 3;
+}
+#left-corner-bg {
+  background-color: black;
+  float: left;
+  width: 250px;
+  height: 100px;
+  z-index:1;
+  border-bottom-right-radius: 290px;
+  border-top-right-radius: 0px;
+  padding-top: -50px;
+}
+.logo-text {
+  color: black;
+  font-family: 'righteous', sans-serif;
+  letter-spacing: 1px;
+  font-size: 45px;
+  z-index: 4;
+  margin: -80px;
+  padding: 0px 110px 0px 150px;
+}
+
+/* Navigation Menu */
+#menu {
+    width: 100%;
+    height: 10px;
+    text-align: center;
+    margin-left: 300px;
+    font-size: 22px;
+}
+#menu ul {
+    padding: -100px 10px;
+    margin: 0px;
+}
+#menu li {
+display: inline-block;
+padding: 0px 15px;
+float: center;
+}
+#menu a:link {
+  color: #000;
+  text-decoration: none;
+}
+#menu a:hover {
+  color: #266dba;
+}
+#menu a:active {
+  color: #FFFFFF;
+}
+#menu a:visited {
+  color: #000;
+}
+.btn-outline {
+   display: inline-block;
+ height: 5px;
+ width: 110px;
+ background: transparent;
+ border: 5px solid rgb(255, 255, 255);
+ border-radius: 20px;
+ padding: 10px 8px 40px 8px !important;
+ font-size: 26px;
+ font-weight: bolder;
+ margin-top: 30px;
+}
+/* Description Hero */
+.hero {
+  text-align: center;
+  margin: 150px 0px;
+  font-size: 26px;
+  width: 100%;
+}
+.descriptions-hero {
+  margin-top: 50px;
+}
+.hero p {
+  font-size: 26px;
+  margin-top: -15px;
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 170px;
+}
+.btn-free-trial {
+  background-color: #000;
+  border-radius: 20px;
+  border: 5px solid rgb(255, 255, 255);
+  width: 100%;
+  height: 100px;
+  padding: 10px 20px;
+  margin: 50px 10px 50px -20px;
+}
+.hero a:link {
+  color: white;
+}
+.hero a:hover {
+  color: #9CCA68;
+  background-color: #F1F2F2;
+}
+.hero a:active {
+  color: #F9D367;
+}
+.hero a:visited {
+  color: #4DBCE9;
+}
+.paper-pencil-send {
+  margin: 0px -100px 0px -20px;
+  padding-top: 30px;
+}
+/* Benefits */
+#benefits {
+  background-color:#9CCA68;
+  border-top: 5px solid #fff;
+  width:100%;
+  height: 25em;
+  font-weight: bold;
+  font-size: 26px;
+  margin: 0px 20px 50px 0px;
+}
+.Features h2{
+  text-align: center;
+  margin: 3em 40px 30px 10px;
+  font-size: 36px;
+  font-weight: bolder;
+  color: #fff;
+}
+#benefits .container {
+  list-style-type: none;
+  font-size: 30px;
+}
