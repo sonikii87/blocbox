@@ -5,7 +5,6 @@ html, body{
    font-family: "nunito", Helvetica, Arial, sans-serif;
    color:#000;
      -webkit-font-smoothing: antialiased;
-    height: 100%;
  }
  h1, h2, h3, h4, h5, h6 {
    font-family: "nunito", Helvetica, Arial, sans-serif;
@@ -22,16 +21,27 @@ html, body{
  }
  /* @mediaqueries */
   @media (min-width: 768px) {
-   .container {
-     width: 685px;
-     font-size: 36px;
+   .container, .footer, header, .main, #pricing, #testimonials {
+     width: 500px;
+     font-size: 20px;
+     padding: 10px auto;
+   }
+   .links {
+    margin-right: 5em;
+   }
+ }
+ @media (min-width: 320px) {
+   .container, .footer, header, .main, #pricing, #testimonials {
+     width: 500px;
+     font-size: 20px;
+     padding: 10px auto;
    }
    .links {
     margin-right: 5em;
    }
  }
  @media (min-width: 992px) {
-   .container {
+   .container, .footer, header, .main {
      width: 970px;
    }
    .one-half {
@@ -48,7 +58,7 @@ html, body{
    }
  }
  @media (min-width: 1200px) {
-   .container {
+   .container, .footer, header, .main {
      width: 1170px;
    }
    header {
@@ -56,7 +66,7 @@ html, body{
    }
  }
  @media (min-width: 1920px) {
-  .container {
+  .container, .footer, header, .main{
     width: 1860px;
   }
   .hero {
@@ -768,6 +778,7 @@ input#img-6:checked ~ .nav-dots label#img-dot-5 {
   padding-right: 35px;
   padding-top: -50px;
   margin-top: 20px;
+  margin-bottom: 0px;
 }
 /**Back To Top Button **/
 #top-page-btn {
