@@ -21,7 +21,7 @@ html, body{
  }
  /* @mediaqueries */
   @media (min-width: 768px) {
-   .container, .footer, header, .main, #pricing, #testimonials {
+   .container, .footer, header, .main, #testimonials {
      width: 500px;
      font-size: 20px;
      padding: 10px auto;
@@ -31,7 +31,7 @@ html, body{
    }
  }
  @media (min-width: 320px) {
-   .container, .footer, header, .main, #pricing, #testimonials {
+   .container, .footer, header, .main, #testimonials {
      width: 500px;
      font-size: 20px;
      padding: 10px auto;
