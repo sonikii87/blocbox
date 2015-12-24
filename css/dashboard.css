@@ -2,6 +2,7 @@
 body {
    background: #F9D367;
    font-family: 'nunito', Helvetica, sans-serif;
+   list-style-type: none;
  }
  a:link {
   text-decoration: none;
@@ -131,6 +132,7 @@ body {
    margin-top: 200px;
    border-radius: 0px 45px 45px 0px;
    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.20);
+   list-style-type: none;
  }
  .account-text {
   color: black;
@@ -138,10 +140,12 @@ body {
   padding-left: 70px;
   font-size: 26px;
   font-weight: bolder;
+  list-style-type: none;
  }
  .settings i {
   margin-top: 30px;
   padding-left: 20px;
+  list-style-type: none;
  }
  .settings a:link {
   color: black;
