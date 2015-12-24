@@ -22,13 +22,12 @@
  </head>
  <body>
  <!-- RESPONSIVE NAV -->
-   <a class="hamburger" id="menu" href="#">&#9776;</a>
+   <a class="hamburger" id="menu" href="#left-nav">&#9776;</a>
    <section id="left-nav">
-   <section id="top-nav">
+   <nav id="top-nav">
       <div class="logo_box">
-      <a href="index.html" class="site-logo" alt="Blocbox Logo" /><img src="images/blocboxlogo-white.png"><h3 class="logo-text">blocbox</h3></a>   
-      </div>
-   </section>
+      <a href="index.html" class="site-logo" alt="Blocbox Logo" /><img src="images/blocboxlogo-white.png"><h3 class="logo-text">blocbox</h3></a></div>
+   </nav>
    <section id="account-nav">
       <div class="settings">
       <ul class="settings-menu">
@@ -65,7 +64,8 @@
           </ul>
         </div> 
       </div>
-   </section>
+      </section>
+   </nav>
    </section>
    <main role="content">
       <section id="header">
@@ -109,7 +109,7 @@
    <script type="text/javascript">
      $(".settings-nav").dropit();
       $( "#menu" ).click(function() {
-         $("#left-nav, #top-nav, #account-nav, #dashboard-nav, .logo_box, .settings-menu, .top").toggleClass("open", 200);
+         $("#left-nav").toggleClass("open", 200);
      });
    </script>
 </body>

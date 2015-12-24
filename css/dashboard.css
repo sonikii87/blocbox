@@ -15,8 +15,75 @@ body {
  a:visited {
   text-decoration: none;
  }
-
+ /*js*/
+ #left-nav, #top-nav, #account-nav, #dashboard-nav, .settings-menu, .top, .settings, .logo-text, .site-logo {
+   height: 100%;
+   width:280px;
+   position:absolute;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   transform: translate(-280px,0);
+     -webkit-transform: translate(-280px,0); /** Chrome & Safari **/
+     -o-transform: translate(-280px,0); /** Opera **/
+     -moz-transform: translate(-280px,0); /** Firefox **/
+ }
+ #left-nav.open, #top-nav.open, #account-nav.open, #dashboard-nav.open,
+  .settings-menu, .top.open, .settings.open, .logo-text.open, .site-logo.open {
+   display:block;
+   width:280px;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+     z-index: 100;
+ }
+ .hamburger {
+   position:absolute;
+   z-index: 1000;
+   background:#34495E;
+   color:#FFF;
+   text-decoration: none;
+   font-size: 22px;
+   padding: 10px 15px;
+   border-radius: 4px;
+   left: 5px;
+   top: 15px;
+ }
+  @media (min-width:992px) {
+   #left-nav, #top-nav, #account-nav, #dashboard-nav,
+    .settings-menu, .top, .settings, .logo-text, #logo {
+     height: 100vh;
+     width:14.66666667%;
+     color:#FFFFFF;
+     background: transparent;
+     float:left;
+     position: fixed;
+     display:block;
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+   #left-nav.open, #top-nav.open, #account-nav.open, #dashboard-nav.open, 
+    .settings-menu, .top.open, .settings.open, .logo-text.open{
+     width:14.66666667%;
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+   .hamburger {
+     display:none;
+   }
+ }
   /*Left-Nav*/
+
 #top-nav {
   background-color: black;
   width: 350px;
@@ -30,7 +97,7 @@ body {
   float: left;
   padding: 10px 70px;
   margin: 5px;
-  z-index: 3;
+  z-index: 999;
 }
 .logo-text {
   color: white;
@@ -454,70 +521,5 @@ box-shadow: 0 3px 3px #333333;
    .content-item {
      width:23%;
      margin:0 1% 25px;
-   }
- }
- /*js*/
- #left-nav, #top-nav, #account-nav, #dashboard-nav, .logo_box, .settings-menu, .top {
-   height: 100%;
-   width:280px;
-   position:absolute;
-   -webkit-transition: all 0.3s ease-in-out;
-   -moz-transition: all 0.3s ease-in-out;
-   -o-transition: all 0.3s ease-in-out;
-   transition: all 0.3s ease-in-out;
-   transform: translate(-280px,0);
-     -webkit-transform: translate(-280px,0); /** Chrome & Safari **/
-     -o-transform: translate(-280px,0); /** Opera **/
-     -moz-transform: translate(-280px,0); /** Firefox **/
- }
- #left-nav.open, #top-nav.open, #account-nav.open, #dashboard-nav.open, .logo_box.open, .settings-menu, .top.open {
-   display:block;
-   width:280px;
-   -webkit-transition: all 0.3s ease-in-out;
-   -moz-transition: all 0.3s ease-in-out;
-   -o-transition: all 0.3s ease-in-out;
-   transition: all 0.3s ease-in-out;
-   transform: translate(0,0);
-     -webkit-transform: translate(0,0); /** Chrome & Safari **/
-     -o-transform: translate(0,0); /** Opera **/
-     -moz-transform: translate(0,0); /** Firefox **/
-     z-index: 100;
- }
- .hamburger {
-   position:absolute;
-   z-index: 1000;
-   background:#34495E;
-   color:#FFF;
-   text-decoration: none;
-   font-size: 22px;
-   padding: 10px 15px;
-   border-radius: 4px;
-   left: 5px;
-   top: 15px;
- }
-  @media (min-width:992px) {
-   #left-nav, #top-nav, #account-nav, #dashboard-nav, .logo-box, .settings-menu, .top {
-     height: 100vh;
-     width:14.66666667%;
-     color:#FFFFFF;
-     background: #34495E;
-     background-image: linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
-     float:left;
-     position: fixed;
-     display:block;
-     transform: translate(0,0);
-     -webkit-transform: translate(0,0); /** Chrome & Safari **/
-     -o-transform: translate(0,0); /** Opera **/
-     -moz-transform: translate(0,0); /** Firefox **/
-   }
-   #left-nav.open, #top-nav.open, #account-nav.open, #dashboard-nav.open, .logo_box.open, .settings-menu, .top.open{
-     width:14.66666667%;
-     transform: translate(0,0), .settings-menu, .top;
-     -webkit-transform: translate(0,0); /** Chrome & Safari **/
-     -o-transform: translate(0,0); /** Opera **/
-     -moz-transform: translate(0,0); /** Firefox **/
-   }
-   .hamburger {
-     display:none;
    }
  }
