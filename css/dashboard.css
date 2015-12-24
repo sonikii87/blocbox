@@ -456,7 +456,8 @@ box-shadow: 0 3px 3px #333333;
      margin:0 1% 25px;
    }
  }
- .top-nav, .account-nav, .dashboard-nav {
+ /*js*/
+ #left-nav, #top-nav, #account-nav, #dashboard-nav, .logo_box, .settings-menu, .top {
    height: 100%;
    width:280px;
    position:absolute;
@@ -469,7 +470,7 @@ box-shadow: 0 3px 3px #333333;
      -o-transform: translate(-280px,0); /** Opera **/
      -moz-transform: translate(-280px,0); /** Firefox **/
  }
- .top-nav, .account-nav, .dashboard-nav.open {
+ #left-nav.open, #top-nav.open, #account-nav.open, #dashboard-nav.open, .logo_box.open, .settings-menu, .top.open {
    display:block;
    width:280px;
    -webkit-transition: all 0.3s ease-in-out;
@@ -495,7 +496,7 @@ box-shadow: 0 3px 3px #333333;
    top: 15px;
  }
   @media (min-width:992px) {
-   .top-nav, .account-nav, .dashboard-nav {
+   #left-nav, #top-nav, #account-nav, #dashboard-nav, .logo-box, .settings-menu, .top {
      height: 100vh;
      width:14.66666667%;
      color:#FFFFFF;
@@ -509,9 +510,9 @@ box-shadow: 0 3px 3px #333333;
      -o-transform: translate(0,0); /** Opera **/
      -moz-transform: translate(0,0); /** Firefox **/
    }
-   .top-nav.open, .account-nav.open, .dashboard-nav.open {
+   #left-nav.open, #top-nav.open, #account-nav.open, #dashboard-nav.open, .logo_box.open, .settings-menu, .top.open{
      width:14.66666667%;
-     transform: translate(0,0);
+     transform: translate(0,0), .settings-menu, .top;
      -webkit-transform: translate(0,0); /** Chrome & Safari **/
      -o-transform: translate(0,0); /** Opera **/
      -moz-transform: translate(0,0); /** Firefox **/
