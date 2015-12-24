@@ -16,7 +16,7 @@ body {
   text-decoration: none;
  }
  /*js*/
- #left-nav, #top-nav, #account-nav, #dashboard-nav, .settings-menu, .top, .settings, .logo-text, .site-logo {
+ #left-nav {
    height: 100%;
    width:280px;
    position:absolute;
@@ -29,8 +29,7 @@ body {
      -o-transform: translate(-280px,0); /** Opera **/
      -moz-transform: translate(-280px,0); /** Firefox **/
  }
- #left-nav.open, #top-nav.open, #account-nav.open, #dashboard-nav.open,
-  .settings-menu, .top.open, .settings.open, .logo-text.open, .site-logo.open {
+ #left-nav.open {
    display:block;
    width:280px;
    -webkit-transition: all 0.3s ease-in-out;
@@ -56,8 +55,7 @@ body {
    top: 15px;
  }
   @media (min-width:992px) {
-   #left-nav, #top-nav, #account-nav, #dashboard-nav,
-    .settings-menu, .top, .settings, .logo-text, #logo {
+   #left-nav {
      height: 100vh;
      width:14.66666667%;
      color:#FFFFFF;
@@ -70,8 +68,7 @@ body {
      -o-transform: translate(0,0); /** Opera **/
      -moz-transform: translate(0,0); /** Firefox **/
    }
-   #left-nav.open, #top-nav.open, #account-nav.open, #dashboard-nav.open, 
-    .settings-menu, .top.open, .settings.open, .logo-text.open{
+   #left-nav.open{
      width:14.66666667%;
      transform: translate(0,0);
      -webkit-transform: translate(0,0); /** Chrome & Safari **/
@@ -92,6 +89,7 @@ body {
   border-radius: 0px 0px 45px 0px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.22);
   position: fixed;
+  z-index: 2;
 }
 .logo_box {
   float: left;
