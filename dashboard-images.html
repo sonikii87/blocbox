@@ -19,39 +19,67 @@
    <link rel="stylesheet" href="css/dashboard-images.css">
    <link rel="stylesheet" href="css/font-awesome.css">
    <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="css/dropit.css">
+   <!-- Javascript -->
+   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+   <script>
+    $(document).ready(function(){
+      //$("div.top").text("Dashboard");
+      $('.toggler').click(function(){
+        var top_html = $('#settings-drop').html();
+        var bottom_html = $('#items').html();
+        var top_label = $('#top_label').html();
+        var bottom_label = $('#bottom_label').html();
+        $('#items').html(top_html);
+        $('#settings-drop').html(bottom_html);
+        $('#top_label').html(bottom_label);
+        $('#bottom_label').html(top_label);
+      });
+    });
+   </script>
  </head>
  <body>
-   <section id="top-nav">
+   <a class="hamburger" id="menu" href="#left-nav">&#9776;</a>
+   <section id="left-nav">
+   <nav id="top-nav">
       <div class="logo_box">
-      <a href="index.html" class="site-logo" alt="Blocbox Logo" /><img src="images/blocboxlogo-white.png"><h3 class="logo-text">blocbox</h3></a>   
-      </div>
-   </section>
+      <a href="index.html" class="site-logo" alt="Blocbox Logo" /><img src="images/blocboxlogo-white.png"><h3 class="logo-text">blocbox</h3></a></div>
+   </nav>
    <section id="account-nav">
       <div class="settings">
-      <a href="" class="account-text" alt="settings" /> My Account<i class="fa fa-gears"></i></a>   
+      <ul class="settings-menu">
+               <li class='toggler'><span id="top_label" style="cursor:pointer">My Account<i class="fa fa-gears"></i></span>
+               <ul id="settings-drop">
+                  <li><a href="#"><i class="fa fa-unlock-alt"></i> Basic Information</a></li>
+                  <li><a href="#"><i class="fa fa-circle-o-notch"></i> Manage Avatar</a></li>
+                  <li><a href="#"><i class="fa fa-users"></i> Manage Collaborators</a></li>
+                  <li><a href="#"><i class="fa fa-briefcase "></i> Upgrade Account</a></li>
+          </ul>   
       </div>
    </section>
    <section id="dashboard-nav">
       <div class="top">
-      <a href="dashboard-returning.html" class="dashboard-text" alt="dashboard" /><i class="fa fa-dashboard"></i> DASHBOARD</a>   
+      <h1><span id="bottom_label" style="cursor:default"><i class="fa fa-dashboard"></i> DASHBOARD</span></h1>   
       </div>
       <div id="items">
-         <h3><a href="dashboard-returning.html" class="items-column" alt="items" /> All Items <i class="fa fa-caret-down"></i></a></h3>
+         <a href="dashboard-returning.html" class="items-column" alt="items" /> All Items <i class="fa fa-caret-down"></i></a>
          <div class="items">
           <ul>
             <li><a href="#"><i class="fa fa-file-o"></i> Notes</a></li>
             <li id="active"><a href="dashboard-images.html"><i class="fa fa-picture-o"></i> Images</a></li>
             <li><a href="#"><i class="fa fa-link"></i> Links</a></li>
-            <li><a href="dashboard-returning.html"><i class="fa fa-plus-square-o"></i> Add a content</a></li>
+            <li><a href="add-content.html"><i class="fa fa-plus-square-o"></i> Add a content</a></li>
           </ul>
           <a href="" class="boxes-column" alt="boxes" /> All Boxes <i class="fa fa-caret-down"></i></a>
           <ul>
             <li><a href="#"><i class="fa fa-inbox"></i> Landing Pages</a></li>
             <li><a href="#"><i class="fa fa-inbox"></i> BB Photos</a></li>
-            <li><a href="#"><i class="fa fa-plus-square-o"></i> Add a new box</a></li>
+            <li><a href=""><i class="fa fa-plus-square-o"></i> Add a new box</a></li>
           </ul>
         </div> 
       </div>
+      </section>
+   </nav>
    </section>
    <main role="main">
    <!-- Benefits -->
@@ -64,63 +92,65 @@
       <div class="container">
         <div class="content-item">
           <div class="item-box">
-+          <img src="http://static.pexels.com/wp-content/uploads/2014/11/red-wine-tapas-3540-825x550.jpg">
+          <img src="http://static.pexels.com/wp-content/uploads/2014/11/red-wine-tapas-3540-825x550.jpg">
           </div>
         </div>
         <div class="content-item">
           <div class="item-box">
-+         <h2><img class="favicon" src="https://www.airbnb.com/favicon.ico"> <a href="#">airbnb.com</a></h2>
-+         <p>Vacation Rentals, Homes, Apartments &amp; Rooms for Rent &mdash; Airbnb</p>
+                  <img class="favicon" src="https://www.airbnb.com/favicon.ico"> <a href="#">airbnb.com</a>
           </div>
         </div>
         <div class="content-item">
           <div class="item-box">
-+          <h2><a href="#">Need to find a designer</a></h2>
-+          <p>We have a one-person design team, but are ready to expand. We need to look for a second designer right now so we can continue to grow.</p>
-+          <p>Put your recommendations here so we can view all of them. ...</p>
+          <img src="images/animal-cute-fur-white.jpg" />
           </div>
         </div>
         <div class="content-item">
           <div class="item-box">
-+          <img src="http://41.media.tumblr.com/90ef0b4692e0ba4df321674c3572e5ba/tumblr_ndyve8fmFa1tubinno1_r1_1280.jpg">
+          <img src="http://41.media.tumblr.com/90ef0b4692e0ba4df321674c3572e5ba/tumblr_ndyve8fmFa1tubinno1_r1_1280.jpg">
           </div>
         </div>
         <div class="content-item">
           <div class="item-box">
-+          <h2><img class="favicon" src="https://www.yourkarma.com/favicon.ico"> <a href="#">yourkarma.com</a></h2>
-+          <p>Karma Go lets you take WiFi everywhere. Pay-as-you-go for data that never expires. No contracts or monthly fees. With nationwide coverage on LTE, stay connected to the internet with all of your devices, seamlessly.</p>
+            <img src="https://www.yourkarma.com/favicon.ico" />
           </div>
         </div>
         <div class="content-item">
           <div class="item-box">
-+          <img src="http://41.media.tumblr.com/0390d80d6c8cc4a7096033182a4bfe8a/tumblr_ndyvukSjNl1tubinno1_1280.jpg">
+          <img src="images/mobile-sharing.png">
           </div>
         </div>
         <div class="content-item">
           <div class="item-box">
-+          <h2><a href="#">Testing</a></h2>
-+          <p>I love lamp.</p>
+          <img src="images/food-restaurant-fruits-orange-large.jpg" />
+          <p>I love bananas!</p>
           </div>
         </div>
         <div class="content-item">
           <div class="item-box">
-+          <h2><img class="favicon" src="https://www.invisionapp.com/favicon.ico"> <a href="#">invisionapp.com</a></h2>
-+          <p>Free Web &amp; Mobile (iOS, Android) Prototyping and UI Mockup Tool | InVision</p>
+          <img src="images/pexels-photo-large.jpg" />
           </div>
         </div>
         <div class="content-item">
           <div class="item-box">
-+          <img src="http://41.media.tumblr.com/fddb3f2b0bdf390efd7ea87372e75fa5/tumblr_ndyg3pYbKW1tubinno1_1280.jpg">
+          <img src="images/nature-flowers-summer-purple.jpg" />
           </div>
         </div>
         <div class="content-item">
           <div class="item-box">
-+          <h2><a href="#">Why storing inspiration is great</a></h2>
-+          <p>blocbox is a new tool to help collect and store your inspiration and information. From images, to links, to notes like this one, you can keep track of all your favorite things.</p>
+          <img src="images/pexels-photo.jpg" />
           </div>
         </div>
       </div> 
     </section>
   </main>
+  <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/dropit.js"></script>
+   <script type="text/javascript">
+     $(".settings-nav").dropit();
+      $( "#menu" ).click(function() {
+         $("#left-nav").toggleClass("open", 200);
+     });
+   </script>
  </body>
  </html>

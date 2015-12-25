@@ -17,7 +17,7 @@ body {
   text-decoration: none;
  }
  /*js*/
- #left-nav {
+ #left-nav, .settings-menu {
    height: 100%;
    width:280px;
    position:absolute;
@@ -30,7 +30,7 @@ body {
      -o-transform: translate(-280px,0); /** Opera **/
      -moz-transform: translate(-280px,0); /** Firefox **/
  }
- #left-nav.open {
+ #left-nav.open, .settings-menu.open {
    display:block;
    width:280px;
    -webkit-transition: all 0.3s ease-in-out;
@@ -56,7 +56,7 @@ body {
    top: 15px;
  }
   @media (min-width:992px) {
-   #left-nav {
+   #left-nav, .settings-menu {
      height: 100vh;
      width:14.66666667%;
      color:#FFFFFF;
@@ -69,7 +69,7 @@ body {
      -o-transform: translate(0,0); /** Opera **/
      -moz-transform: translate(0,0); /** Firefox **/
    }
-   #left-nav.open{
+   #left-nav.open, .settings-menu.open{
      width:14.66666667%;
      transform: translate(0,0);
      -webkit-transform: translate(0,0); /** Chrome & Safari **/
@@ -121,9 +121,9 @@ body {
   color: white;
  }
   /*ACCOUNT TAB*/
-.settings {
+.settings-menu {
    height: 80%;
-   width:350px;
+   width:310px;
    color:#000;
    background: #fff;
    float:left;
@@ -134,6 +134,47 @@ body {
    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.20);
    list-style-type: none;
  }
+ .settings-drop {
+  padding-top: 50px;
+ }
+ #top_label {
+  font-size: 26px;
+  font-weight: bolder;
+ }
+  #settings-drop {
+  padding-top: 50px;
+ }
+ #settings-drop li {
+  list-style-type: none;
+  margin-top: 50px;
+ }
+.toggler i {
+  font-size: 40px;
+ }
+ #top_label {
+  color: black;
+  text-align: center;
+  padding-left: 10px;
+  font-size: 28px;
+  font-weight: bolder;
+  list-style-type: none;
+ }
+ #top_label i {
+  margin-top: 25px;
+  padding-left: 20px;
+  font-weight: 40px;
+ }
+ #bottom_label {
+  padding-left: 20px;
+  padding-top: ;
+ }
+ #bottom_label li, #items li{
+  list-style-type: none;
+ }
+ #bottom_label i {
+  font-size: 40px;
+  padding-left: 10px;
+ }
  .account-text {
   color: black;
   text-align: center;
@@ -142,21 +183,26 @@ body {
   font-weight: bolder;
   list-style-type: none;
  }
+ .settings {
+  font-size: 22px;
+  font-weight: bolder;
+ }
  .settings i {
   margin-top: 30px;
   padding-left: 20px;
   list-style-type: none;
+  font-size: 40px;
  }
- .settings a:link {
+ #account-nav a:link {
   color: black;
  }
- .settings a:hover {
+ #account-nav a:hover {
   color: #9CCA68;
  }
- .settings a:active {
+ #account-nav a:active {
   color: white;
  }
- .settings a:visited {
+ #account-nav a:visited {
   color: black;
  }
   /* DASHBOARD TAB */
@@ -197,6 +243,13 @@ body {
   margin-top: 80px;
   font-size: 46px;
 }
+.top h1 i {
+  font-size: 50px;
+  padding-left: 15px;
+}
+.top h1 {
+  margin: 0.25em -20px 50px 30px;
+}
 .top a:link {
   color: white;
  }
@@ -209,6 +262,7 @@ body {
 .top a:visited {
   color: white;
  }
+
   /**All Items**/
 #items {
   font-size: 26px;
@@ -524,4 +578,192 @@ box-shadow: 0 3px 3px #333333;
      width:23%;
      margin:0 1% 25px;
    }
+ }
+/*** JS FOR DROPDOWN MENU ***/
+.settings-menu li, .settings-menu a {zoom:1;} /* Hacks for IE6, IE7 */
+.settings-menu, #.settings-menuul
+{
+    width: 180px; /* Main Menu Item widths */
+    border: 1px solid #ccc;
+    border-top:none;
+    position: relative; font-size:0;
+    list-style: none; margin: 0; padding: 0; display:block;
+    z-index:9;
+    font-size: 22px;
+}
+                
+/* Top level menu links style
+---------------------------------------*/
+
+#settings-menu li
+{
+    background: #FFF url(bg.gif) repeat-x 0 2px;
+    list-style: none; margin: 0; padding: 0;
+}
+#settings-menu li a
+{
+    font: normal 12px Arial;
+    border-top: 1px solid #ccc;
+    display: block;
+    /*overflow: auto; force hasLayout in IE7 */
+    color: black;
+    text-decoration: none;
+    line-height:26px;
+    padding-left:26px;            
+}
+#settings-menu ul li a
+{
+    line-height:30px;
+}
+                
+#settings-menu li a.arrow:hover
+{
+    background-image:url(arrowon.gif);
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+}
+        
+/*Sub level menu items
+---------------------------------------*/
+#settings-menu li ul
+{
+    position: absolute;
+    width: 200px; /*Sub Menu Items width */
+    visibility:hidden;
+}
+        
+#settings-menu a.arrow
+{
+    background-image:url(arrow.gif);
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+}
+#settings-menu li:hover, #settings-menu li.onhover
+{
+    background-position:0 -62px;
+}
+#settings-menu ul li
+{
+    background: rgba(255, 255, 255, 0.86);
+    background-image:none;
+}
+#settings-menu ul li:hover, #settings-menu ul li.onhover
+{
+    background: #FFF;
+    background-image:none;
+}
+        
+menu-wrap {
+    width:300px;
+    position: relative;
+    margin: 20em 60em;
+    height: 200px;
+}
+.add-button p {
+  font-size: 72px;
+  text-align: center;
+  margin: -500px -80px;
+}
+.add-button li i {
+  font-size: 32px;
+}
+.menu {
+    width:1000px;
+    margin:0px auto;
+}
+ 
+.menu li {
+    margin:0px auto;
+    list-style:none;
+    font-size: 72px;
+}
+ 
+.menu a {
+    transition:all linear 0.15s;
+    color:#919191;
+}
+ 
+.menu li:hover > a, .menu .current-item > a {
+    text-decoration:none;
+}
+ 
+.menu .arrow {
+    font-size:11px;
+    line-height:0%;
+}
+ 
+/*----- Top Level -----*/
+.menu > ul > li {
+    float:left;
+    display:inline-block;
+    position:relative;
+    font-size:19px;
+    margin: 0 20px;
+}
+ 
+.menu > ul > li > a {
+    padding:0px 40px;
+    display:inline-block;
+    text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+    font-size: 36px;
+}
+ 
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+}
+ 
+/*----- Bottom Level -----*/
+.menu li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
+    background: black;
+    opacity: .8;
+}
+ 
+.sub-menu {
+    width:300px;
+    height: 450px;
+    padding:15px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background:#000;
+    margin-top: -38em;
+}
+.sub-menu i {
+  padding-right: 10px;
+}
+.sub-menu li {
+    display:inline-block;
+    font-size:32px;
+    color: white;
+    width: 300px;
+    padding: 30px 15px;
+    padding-right: 35px;
+}
+ 
+.sub-menu li a {
+    display:inline-block;
+}
+ 
+.sub-menu li a:hover, .sub-menu .current-item a {
+    color: #9CCA68;
+}
+.drop-down a:link {
+  color: white;
+ }
+
+.drop-down a:hover {
+  color: #9CCA68;
+ }
+
+.drop-down a:active {
+  color: white;
+ }
+
+.drop-down a:visited {
+  color: white;
  }

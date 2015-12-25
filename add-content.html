@@ -18,24 +18,57 @@
    <link rel="stylesheet" href="css/dashboard.css">
    <link rel="stylesheet" href="css/font-awesome.css">
    <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="css/dropit.css">
+   <!-- Javascript -->
+   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+   <script>
+    $(document).ready(function(){
+      //$("div.top").text("Dashboard");
+      var state = 0;
+      $('.toggler').click(function(){
+        var top_html = $('#settings-drop').html();
+        var bottom_html = $('#items').html();
+        var top_label = $('#top_label').html();
+        var bottom_label = $('#bottom_label').html();
+        $('#items').html(top_html);
+        $('#settings-drop').html(bottom_html);
+        $('#top_label').html(bottom_label);
+        $('#bottom_label').html(top_label);
+        var color = $('#top_label').text() == 'My Account'? '#9CCA68' : '#81cff6';
+        $('#dashboard-nav').css('background-color', color);
+        var color = $('#bottom_label').text() == 'My Account'? '#9CCA68' : '#81cff6';
+        $('.top').css('background-color',color);
+      });
+    });
+   </script>
  </head>
  <body>
-   <section id="top-nav">
+   <!-- RESPONSIVE NAV -->
+   <a class="hamburger" id="menu" href="#left-nav">&#9776;</a>
+   <section id="left-nav">
+   <nav id="top-nav">
       <div class="logo_box">
-      <a href="index.html" class="site-logo" alt="Blocbox Logo" /><img src="images/blocboxlogo-white.png"><h3 class="logo-text">blocbox</h3></a>   
-      </div>
-   </section>
+      <a href="index.html" class="site-logo" alt="Blocbox Logo" /><img src="images/blocboxlogo-white.png"><h3 class="logo-text">blocbox</h3></a></div>
+   </nav>
    <section id="account-nav">
       <div class="settings">
-      <a href="" class="account-text" alt="settings" /> My Account<i class="fa fa-gears"></i></a>   
+      <ul class="settings-menu">
+               <li class='toggler'><span id="top_label" style="cursor:pointer">My Account<i class="fa fa-gears"></i></span>
+               <ul id="settings-drop">
+                  <li><a href="#"><i class="fa fa-unlock-alt"></i> &nbsp; Basic Information</a></li>
+                  <li><a href="#"><i class="fa fa-circle-o-notch"></i> Manage Avatar</a></li>
+                  <li><a href="#"><i class="fa fa-users"></i> Manage Collaborators</a></li>
+                  <li><a href="#"><i class="fa fa-briefcase "></i> Upgrade Account</a></li>
+                </ul>
+          </ul>   
       </div>
    </section>
    <section id="dashboard-nav">
       <div class="top">
-      <a href="dashboard-returning.html" class="dashboard-text" alt="dashboard" /><i class="fa fa-dashboard"></i> DASHBOARD</a>   
+      <h1><span id="bottom_label" style="cursor:default"><i class="fa fa-dashboard"></i> DASHBOARD</span></h1>   
       </div>
       <div id="items">
-         <a href="" class="items-column" alt="items" /> All Items <i class="fa fa-caret-down"></i></a>
+         <a href="dashboard-returning.html" class="items-column" alt="items" /> All Items <i class="fa fa-caret-down"></i></a>
          <div class="items">
           <ul>
             <li><a href="#"><i class="fa fa-file-o"></i> Notes</a></li>
@@ -47,10 +80,12 @@
           <ul>
             <li><a href="#"><i class="fa fa-inbox"></i> Landing Pages</a></li>
             <li><a href="#"><i class="fa fa-inbox"></i> BB Photos</a></li>
-            <li><a href="#"><i class="fa fa-plus-square-o"></i> Add a new box</a></li>
+            <li><a href=""><i class="fa fa-plus-square-o"></i> Add a new box</a></li>
           </ul>
         </div> 
       </div>
+      </section>
+   </nav>
    </section>
    <main role="content">
       <section id="header">
@@ -89,5 +124,13 @@
             </div-->
       </section>
    </main>
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/dropit.js"></script>
+   <script type="text/javascript">
+     $(".settings-nav").dropit();
+      $( "#menu" ).click(function() {
+         $("#left-nav").toggleClass("open", 200);
+     });
+   </script>
 </body>
 </html>
