@@ -77,8 +77,8 @@ html, body{
  }
   /* GRID */
 .container {
-   margin-right: 200px;
-   margin-left: -100px;
+   margin-right: 120px;
+   margin-left: -20px;
    padding-left: 100px;
    padding-right: 15px;
    position: relative;
