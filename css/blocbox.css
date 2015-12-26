@@ -387,11 +387,8 @@ float: center;
 .basic-plan, .premium-plan {
   font-size: 38px;
 }
-.right-box, .left-box {
+.right-box, .middle-box, .left-box {
   padding: 0;
-}
-.middle-box {
-  padding-right: 90px;
 }
 .features {
   font-size: 26px;
