@@ -77,8 +77,8 @@ html, body{
  }
   /* GRID */
 .container {
-   margin-right: auto;
-   margin-left: auto;
+   margin-right: 120px;
+   margin-left: -20px;
    padding-left: 100px;
    padding-right: 15px;
    position: relative;
@@ -387,8 +387,11 @@ float: center;
 .basic-plan, .premium-plan {
   font-size: 38px;
 }
-.right-box, .middle-box, .left-box {
+.right-box, .left-box {
   padding: 0;
+}
+.middle-box {
+  padding-right: 90px;
 }
 .features {
   font-size: 26px;
