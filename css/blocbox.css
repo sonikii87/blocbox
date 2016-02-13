@@ -82,6 +82,7 @@ html, body{
    padding-left: 100px;
    padding-right: 15px;
    position: relative;
+   width: 100%;
  }
  .container:before,
  .container:after {
