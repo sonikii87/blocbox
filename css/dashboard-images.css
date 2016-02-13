@@ -593,7 +593,7 @@ text-decoration: none;
  .content {
    padding:6em 1% 1.5em;
    float:right;
-   width:98%;
+   width:75%;
    position: relative;
  }
  .content .header {
