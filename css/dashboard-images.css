@@ -712,7 +712,7 @@ span.view span {
    .content {
      padding:1.5em 1%;
      float:right;
-     width:83.33333333%;
+     width:75%;
      position: relative;
    }
    .content > .container {
