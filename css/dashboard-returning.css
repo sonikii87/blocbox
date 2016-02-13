@@ -635,9 +635,9 @@ margin-left: -50px;
 }
 /* Form wrapper styling */
 .form-wrapper {
-    width: 65em;
+    width: 79.25em;
     padding: 15px;
-    margin: 2em auto 50px 450px;
+    margin: 2em auto 50px 390px;
     background: #444;
     background: rgba(0,0,0,.2);
     border-radius: 20px;
@@ -647,7 +647,7 @@ margin-left: -50px;
 /* Form text input */
 
 .form-wrapper input {
-    width: 60em;
+    width: 75em;
     height: 20px;
     padding: 10px 5px;
     float: left;    
