@@ -388,7 +388,7 @@ float: center;
 .basic-plan, .premium-plan {
   font-size: 38px;
 }
-.right-box, .middle-box, .left-box {
+.right-box, .left-box {
   padding: 0;
 }
 .features {
@@ -413,6 +413,9 @@ float: center;
 }
 .middle-box .features {
   height: 120px;
+}
+.middle-box {
+	padding-right: 30px;
 }
 /*buttons*/
 .btn-pricing {
