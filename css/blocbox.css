@@ -376,14 +376,14 @@ float: center;
 .basic-plan {
   background-color: #9CCA68;
   float: left;
-  margin-left: 100px;
+  margin-left: 25px;
   margin-top: 50px;
 }
 .premium-plan {
   background-color: #9CCA68;
   float: right;
   margin-top: -15.25em;
-  margin-right: 100px;
+  margin-right: 25px;
 }
 .basic-plan, .premium-plan {
   font-size: 38px;
